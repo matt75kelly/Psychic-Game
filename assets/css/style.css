@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+}
+h1 {
+    margin: 2vh auto;
+}
+h4 {
+    margin: 3vh auto;   
+}
+#winCount {
+    color: blue;
+    font-size: 2rem;
+    border-bottom: 3px solid navy;
+}
+#lossCount {
+    color: red;
+    font-size: 1.8rem;
+    border-bottom: 3px solid crimson;
+}
+#guessCount {
+    color: green;
+    font-size: 2rem;
+    border-bottom: 3px solid darkolivegreen;
+}
+#guessedHeading {
+    color: peru;
+    font-size: 2.5rem;
+    border-bottom: 3px solid chocolate;
+}
+#guessedListing {
+    color: purple;
+    font-size: 2rem;
+    border: 5px solid darkslateblue;
+}
