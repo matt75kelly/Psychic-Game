@@ -8,7 +8,6 @@ var computerLetter = "?";
 // need a function to generate a Computer Guess
 function computerAnswer(){
     computerLetter = letters[Math.floor(Math.random()*26)];
- //   console.log(computerLetter);
 }
 // need a function to check the input to make sure that it is a letter
 function checkGuess(guess) {
@@ -19,7 +18,6 @@ function checkGuess(guess) {
             i += 26;
         }
     }
-//    console.log("isLetter: " + isLetter);
     return isLetter;
 }
 // adding a function to test whether or not the player has already guessed that number.
@@ -29,8 +27,6 @@ function isUnique(guess){
         if (guess === guessesDone[i]){
             isSpecial= false;
         }
-  //      console.log("PlayerKey: " + guess);
-  //      console.log("GuessesDone[i]: " + guessesDone[i]);
     }
 
     return isSpecial;
@@ -41,7 +37,6 @@ function testGuess(guess) {
     if (guessLeft >0 && guess === computerLetter){
         isMatch = true;
     }
- //   console.log("isMatch: " + isMatch);
     return isMatch;
 }
 // need a function to update the scores and guesses on the screen
@@ -64,12 +59,10 @@ function resetGame(){
 // calling the functions.
 computerAnswer();
 updateScores();
-//console.log("Player Guesses: " + guessesDone);
 document.onkeyup = function(event) {
     var playerKey= event.key.toUpperCase();
     if (checkGuess(playerKey) && isUnique(playerKey)){
         guessesDone = playerKey + ", " + guessesDone;
- //       console.log("GuessesDone.Length: " + guessesDone.length);
         if (testGuess(playerKey) && guessLeft >0){
             wins++;
             guessLeft--;
