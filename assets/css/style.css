@@ -7,9 +7,6 @@ h1 {
 h4 {
     margin: 3vh auto;   
 }
-input {
-    color: white;
-}
 #winCount {
     color: blue;
     font-size: 2rem;
@@ -34,4 +31,14 @@ input {
     color: purple;
     font-size: 2rem;
     border: 5px solid darkslateblue;
+}
+#lostBanner {
+    display: none;
+    width: 500px;
+    margin: 10px auto;
+}
+#winBanner {
+    display: none;
+    width: 500px;
+    margin: 10px auto;
 }

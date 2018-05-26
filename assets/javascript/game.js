@@ -63,19 +63,22 @@ document.onkeyup = function(event) {
     var playerKey= event.key.toUpperCase();
     if (checkGuess(playerKey) && isUnique(playerKey)){
         guessesDone = playerKey + ", " + guessesDone;
+        document.getElementById("winBanner").style.display = "none";
+        document.getElementById("lostBanner").style.display = "none";
+        
         if (testGuess(playerKey) && guessLeft >0){
             wins++;
             guessLeft--;
-            resetGame();
             updateScores();
-            confirm("You Guessed Right! Way to Go!!");
+            resetGame();
+            document.getElementById("winBanner").style.display = "block";
         }
         else if (!testGuess(playerKey) && guessLeft <= 1) {
             losses++;
             guessLeft--;
-            resetGame();
             updateScores();
-            confirm("Sorry! Those Weren't My Letter! Try Again?");
+            resetGame();
+            document.getElementById("lostBanner").style.display = "block";
         }
         else {
             guessLeft--;
